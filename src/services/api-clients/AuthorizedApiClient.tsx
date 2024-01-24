@@ -1,7 +1,7 @@
 import axios, { AxiosRequestConfig, AxiosError, AxiosResponse } from "axios";
 import { DeviceEventEmitter, Platform } from "react-native";
 import { authorizationService } from "../AuthorizationService";
-import DeviceInfo from "react-native-device-info";
+import DeviceInfo from "expo-device";
 import { getSecureData, removeToken } from "@/utils/keychainStorage";
 
 let failedQueue: any = [];

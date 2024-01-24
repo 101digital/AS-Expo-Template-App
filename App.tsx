@@ -11,7 +11,7 @@ import themeData from "@/assets/theme-data";
 import { ThemeProvider } from "react-native-theme-component";
 import { BranchProvider } from "react-native-branch-component";
 
-import SplashScreen from "react-native-splash-screen";
+import * as SplashScreen from 'expo-splash-screen';
 LogBox.ignoreLogs(["Warning: ..."]); // Ignore log notification by message
 LogBox.ignoreAllLogs(); //Ignore all log notifications
 import env from "@/env";
@@ -61,7 +61,7 @@ AuthorizationClient.instance()
   });
 const App = () => {
   useEffect(() => {
-    setTimeout(() => SplashScreen.hide(), 2000);
+    setTimeout(() => SplashScreen.hideAsync(), 2000);
   });
 
   return (

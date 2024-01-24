@@ -2,7 +2,7 @@
 #
 .DS_Store
 coverage
-node_modules
+node_modules/
 
 # Xcode
 #
@@ -75,3 +75,5 @@ console.log
 
 jest_html_reporters.html
 jest-html-reporters-attach/
+
+.expo
