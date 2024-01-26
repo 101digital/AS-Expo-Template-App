@@ -2,6 +2,7 @@
 type MembershipServiceClient = any;
 
 import env from "@/env";
+import { getSecureData } from "@/utils/keychainStorage";
 
 export class MembershipService {
   private static _instance: MembershipService = new MembershipService();
@@ -28,11 +29,15 @@ export class MembershipService {
 
   getProfile = async () => {
     try {
-      const {} = env.api;
+      console.log('wwwwwwwwwwwwww');
+      let accessToken = await getSecureData("token");
+      console.log('accessToken ',accessToken);
+      
       if (!this._membershipServiceClient) {
         throw new Error("MembershipService Client is not registered");
       }
-
+      console.log('getProfile ',this._membershipServiceClient);
+      
       // userProfile
       const userProfileResponse =
         await this._membershipServiceClient.get(`/users/me?`);

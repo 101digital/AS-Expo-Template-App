@@ -19,10 +19,11 @@ class AuthApiClient {
         baseURL: AUTH_BASE_URL,
         headers: {
           "Content-Type": "application/json",
-        },
+        }
       });
     }
   }
+  
 
   public getApiClient(): AxiosInstance {
     if (!this._axiosInstance) {

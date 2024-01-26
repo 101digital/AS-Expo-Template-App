@@ -25,7 +25,7 @@ const UserAuthenticationComponentComponent: React.FC<any> = ({
       const { email, password } = values;
       const response = await login(email, password);
       if (response) {
-        navigation.navigate(Route.MAIN_NAVIGATOR, {});
+        navigation.navigate(Route.HOME_SCREEN);
         setLoginSuccess("undefined");
       } else {
         setLoginError("Login failed. Please check your username and password.");

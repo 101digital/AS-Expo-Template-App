@@ -51,9 +51,13 @@ class AuthorizationService {
         },
       );
 
+      const cookies = loginResponse.headers;
+      console.log('cookies3 ',cookies);
+      
+
       // Resume
       const resumeResponse = await authApiClientInstance.get(
-        `${loginResponse.data.resumeUrl}`,
+        `${loginResponse.data.resumeUrl}`
       );
 
       // Token

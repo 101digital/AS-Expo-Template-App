@@ -5,7 +5,7 @@ import { MembershipService } from "../services/MembershipService";
 type MembershipContextValue = {
   userProfile: string | null;
   userProfileLoading: boolean;
-  getProfile: (username: any, password: any) => Promise<any>;
+  getProfile: () => Promise<any>;
 };
 
 // Create the membership context

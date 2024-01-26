@@ -64,8 +64,7 @@ fastlane/screenshots
 # Keys
 ios/tmp.xcconfig
 
-# Environment
-.env
+
 
 console.log
 
